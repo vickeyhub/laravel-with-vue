@@ -1,24 +1,22 @@
 <template>
     <v-app>
-        <v-app-bar color="indigo">
-            <template v-slot:prepend>
-                <v-app-bar-nav-icon size="45px"><v-icon>mdi-menu</v-icon></v-app-bar-nav-icon>
-            </template>
-            <v-app-bar-title>Admin Panel</v-app-bar-title>
-            <template v-slot:append>
-                <v-btn icon="mdi-magnify"></v-btn>
-                <v-btn icon="mdi-dots-vertical"></v-btn>
-            </template>
-        </v-app-bar>
+        <Header/>
+        <v-main style="height: 500px">
+            <v-card-text>
+                The navigation drawer will appear from the bottom on smaller
+                size screens.
+            </v-card-text>
+        </v-main>
     </v-app>
-  </template>
+</template>
 <script>
 import { useHead } from "@vueuse/head";
+import Header from '../components/Header.vue';
 export default {
     setup() {
         useHead({
             // Can be static or computed
-            title: 'Home',
+            title: "Home",
             meta: [
                 {
                     name: `description`,
@@ -26,6 +24,9 @@ export default {
                 },
             ],
         });
+    },
+    components: {
+        Header
     },
 };
 </script>
