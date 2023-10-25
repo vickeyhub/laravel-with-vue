@@ -5,7 +5,7 @@ import register from './pages/register.vue';
 
 const routes = [
     {
-        path: '/',
+        path: '/admin/',
         name: 'Home',
         component: home
     },
