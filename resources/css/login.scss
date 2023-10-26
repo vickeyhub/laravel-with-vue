@@ -1,5 +1,4 @@
 .login-wrapper{
-    width: 100%;
     background: linear-gradient(90deg, #536DFE 50%, hsl(228deg 33.33% 97.06%) 50%);
     display: flex !important;
     align-items: center;
@@ -9,11 +8,7 @@
         height: 90%;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
         border-radius: 25px;
-        .login-text-content {
-            h1{
-                // font-size: 100px;
-            }
-        }
+        
     }
     .login-form{
         .remember-me-checkbox{
@@ -21,3 +16,21 @@
         }
     }
 }
+@media screen and (max-width: 600px) {
+    // Styles for screens with a maximum width of 600px (Mobile)
+    .login-wrapper{
+        background: linear-gradient(155deg, #536DFE 35%, hsl(228deg 33.33% 97.06%) 60%);
+        h1{
+            font-size: 50px !important;
+            line-height: 50px;
+        }
+    }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 900px) and (orientation: portrait) {
+    // Styles for screens with a width between 601px and 900px in portrait mode (Tablet)
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+    // Styles for screens with a width between 601px and 900px in landscape mode (Tablet)
+  }
